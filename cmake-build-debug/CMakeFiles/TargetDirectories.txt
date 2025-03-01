@@ -1,0 +1,3 @@
+/Users/shawnickwang/Desktop/custom_cryptocurrency/cmake-build-debug/CMakeFiles/custom_cryptocurrency.dir
+/Users/shawnickwang/Desktop/custom_cryptocurrency/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/shawnickwang/Desktop/custom_cryptocurrency/cmake-build-debug/CMakeFiles/rebuild_cache.dir
