@@ -9,4 +9,6 @@ add_executable(custom_cryptocurrency main.cpp
         block.h
         block.cpp
         transaction.cpp
-        transaction.h)
+        transaction.h
+        sha256.cpp
+        sha256.h)
