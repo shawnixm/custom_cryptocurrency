@@ -7,6 +7,7 @@ using namespace std;
 
 class Block {
 public:
+    Block(vector<Transaction> transactions = vector<Transaction>());
     Block(vector<Transaction> transactions, Block previous_block);
     string calculate_hash(vector<Transaction> transactions, int height, string time_stamp);
     int get_height();

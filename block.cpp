@@ -5,6 +5,13 @@
 #include <ctime>
 using namespace std;
 
+Block::Block(vector<Transaction> transactions) {
+    _height = 0;
+    _time_stamp = std::to_string(time(nullptr));
+    _previous_hash = "0";
+    _transactions = transactions;
+    _hash = calculate_hash(_transactions, _height, _time_stamp);
+}
 Block::Block(vector<Transaction> transactions, Block previous_block) {
     _height = previous_block.get_height() + 1;
     _transactions = transactions;

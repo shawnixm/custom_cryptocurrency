@@ -7,11 +7,10 @@ using namespace std;
 class Blockchain {
 public:
     Blockchain();
-    Block add_block(Block block);
-    Block create_block();
-    Block add_genesis_block();
+    void add_block(Block block);
+    Block create_block(vector<Transaction> transactions, Block previous_block);
 private:
-    vector<Block> chain;
+    vector<Block> _chain;
 };
 
 #endif //BLOCKCHAIN_H
