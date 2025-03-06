@@ -9,6 +9,7 @@ public:
     Blockchain();
     void add_block(Block block);
     Block create_block(vector<Transaction> transactions, Block previous_block);
+    vector<Block> get_blocks();
 private:
     vector<Block> _chain;
 };

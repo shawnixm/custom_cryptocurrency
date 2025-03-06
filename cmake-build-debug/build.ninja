@@ -73,6 +73,12 @@ build CMakeFiles/custom_cryptocurrency.dir/transaction.cpp.o: CXX_COMPILER__cust
   OBJECT_DIR = CMakeFiles/custom_cryptocurrency.dir
   OBJECT_FILE_DIR = CMakeFiles/custom_cryptocurrency.dir
 
+build CMakeFiles/custom_cryptocurrency.dir/sha256.cpp.o: CXX_COMPILER__custom_cryptocurrency_unscanned_Debug /Users/shawnickwang/Desktop/custom_cryptocurrency/sha256.cpp || cmake_object_order_depends_target_custom_cryptocurrency
+  DEP_FILE = CMakeFiles/custom_cryptocurrency.dir/sha256.cpp.o.d
+  FLAGS = -g -std=gnu++20 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk -mmacosx-version-min=15.1 -fcolor-diagnostics
+  OBJECT_DIR = CMakeFiles/custom_cryptocurrency.dir
+  OBJECT_FILE_DIR = CMakeFiles/custom_cryptocurrency.dir
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target custom_cryptocurrency
@@ -81,7 +87,7 @@ build CMakeFiles/custom_cryptocurrency.dir/transaction.cpp.o: CXX_COMPILER__cust
 #############################################
 # Link the executable custom_cryptocurrency
 
-build custom_cryptocurrency: CXX_EXECUTABLE_LINKER__custom_cryptocurrency_Debug CMakeFiles/custom_cryptocurrency.dir/main.cpp.o CMakeFiles/custom_cryptocurrency.dir/blockchain.cpp.o CMakeFiles/custom_cryptocurrency.dir/block.cpp.o CMakeFiles/custom_cryptocurrency.dir/transaction.cpp.o
+build custom_cryptocurrency: CXX_EXECUTABLE_LINKER__custom_cryptocurrency_Debug CMakeFiles/custom_cryptocurrency.dir/main.cpp.o CMakeFiles/custom_cryptocurrency.dir/blockchain.cpp.o CMakeFiles/custom_cryptocurrency.dir/block.cpp.o CMakeFiles/custom_cryptocurrency.dir/transaction.cpp.o CMakeFiles/custom_cryptocurrency.dir/sha256.cpp.o
   FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk -mmacosx-version-min=15.1
   OBJECT_DIR = CMakeFiles/custom_cryptocurrency.dir
   POST_BUILD = :

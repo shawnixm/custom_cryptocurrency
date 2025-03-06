@@ -17,3 +17,6 @@ Block Blockchain::create_block(vector<Transaction> transactions, Block previous_
     return block;
 }
 
+vector<Block> Blockchain::get_blocks() {
+    return _chain;
+}

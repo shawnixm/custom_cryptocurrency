@@ -1,0 +1,7 @@
+# ninja log v6
+2	229	1741240133077122405	CMakeFiles/custom_cryptocurrency.dir/transaction.cpp.o	72acea69c5aa29dd
+2	300	1741240133077010446	CMakeFiles/custom_cryptocurrency.dir/block.cpp.o	27c4f574a57b065e
+2	312	1741240133076857571	CMakeFiles/custom_cryptocurrency.dir/blockchain.cpp.o	97f5365a3c5cce9a
+1	352	1741240133076357447	CMakeFiles/custom_cryptocurrency.dir/main.cpp.o	cac1464d305687bc
+3	205	1741240223935349705	CMakeFiles/custom_cryptocurrency.dir/sha256.cpp.o	eee3a4cd11c17406
+205	248	1741240224137063898	custom_cryptocurrency	11dc5625227098fb
