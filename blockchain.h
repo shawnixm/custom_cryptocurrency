@@ -9,6 +9,9 @@ public:
     // Constructor
     Blockchain();
 
+    // Wallet Generation
+    void generate_wallet();
+
     // Setters
     void add_block(Block block);
 
