@@ -8,6 +8,9 @@ public:
     // Constructor
     Transaction(string sender, string receiver, string amount);
 
+    // Signing
+    void sign_transaction(string sender_key);
+
     // Getters
     string calculate_hash(string sender, string receiver, string amount, string time_stamp);
     string get_sender();
@@ -21,5 +24,6 @@ private:
     string _amount;
     string _time_stamp;
     string _hash;
+    string _sender_key;
 };
 #endif //TRANSACTION_H

@@ -19,6 +19,7 @@ public:
     vector<Block> get_blocks();
     Block get_top_block();
     int get_blockchain_difficulty();
+    void print_blockchain();
 private:
     vector<Block> _chain;
     int _blockchain_difficulty;

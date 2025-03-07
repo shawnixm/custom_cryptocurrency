@@ -59,3 +59,29 @@ Block Blockchain::get_top_block() {
 int Blockchain::get_blockchain_difficulty() {
     return _blockchain_difficulty;
 }
+
+void Blockchain::print_blockchain() {
+    for (int i = 0; i < _chain.size(); ++i) {
+        cout << "Height: " << _chain[i].get_height() << endl;
+        cout << "Hash: " << _chain[i].get_hash() <<endl;
+        cout << "Hash of previous block: " << _chain[i].get_previous_hash() << endl;
+        cout << "Timestamp: " << _chain[i].get_timestamp() << endl;
+        cout << "Nonce: " << _chain[i].get_nonce() << endl;
+        cout << "Difficulty: " << _chain[i].get_difficulty() << endl;
+        vector<Transaction> transactions = _chain[i].get_transactions();
+        cout << "Transaction: " << endl;
+        if (transactions.size() > 0) {
+            for (int j = 0; j < transactions.size(); ++j) {
+                cout << "   Transaction #" << j+1 << endl;
+                cout << "   Sender: " << transactions[j].get_sender() << endl;
+                cout << "   Reciever: " << transactions[j].get_receiver() << endl;
+                cout << "   Amount: " << transactions[j].get_amount() << endl;
+                cout << "   Timestamp: " << transactions[j].get_time_stamp() << endl;
+                cout << "   Hash: " << transactions[j].get_hash() << endl;
+            }
+        } else {
+            cout << "   {}" << endl;
+        }
+        cout << "" << endl;
+    }
+}

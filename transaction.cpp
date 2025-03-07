@@ -21,6 +21,12 @@ string Transaction::calculate_hash(string sender, string receiver, string amount
     return hash;
 }
 
+// Signing
+void Transaction::sign_transaction(string sender_key) {
+    _sender_key = sender_key;
+}
+
+
 // Getters
 string Transaction::get_sender() {
     return _sender;

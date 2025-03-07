@@ -93,3 +93,16 @@ int Block::get_nonce() {
 int Block::get_difficulty() {
     return _difficulty;
 }
+
+vector<Transaction> Block::get_transactions() {
+    return _transactions;
+}
+
+string Block::get_previous_hash() {
+    return _previous_hash;
+}
+
+string Block::get_timestamp() {
+    return _time_stamp;
+}
+

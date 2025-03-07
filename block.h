@@ -26,6 +26,9 @@ public:
     string get_hash();
     int get_nonce();
     int get_difficulty();
+    vector<Transaction> get_transactions();
+    string get_previous_hash();
+    string get_timestamp();
 private:
     int _height;
     string _time_stamp;
