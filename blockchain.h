@@ -9,6 +9,9 @@ public:
     // Constructor
     Blockchain();
 
+    // Consensus Mechanism (Longest Chain)
+    Blockchain resolve_conflicts(Blockchain blockchain1, Blockchain blockchain2);
+
     // Wallet Generation
     void generate_wallet();
 

@@ -17,9 +17,13 @@ Blockchain::Blockchain() {
     _chain.push_back(genesis_block);
 }
 
-// Setters
-void Blockchain::add_block(Block block) {
-    _chain.push_back(block);
+// Consensus Mechanism (Longest Chain)
+Blockchain Blockchain::resolve_conflicts(Blockchain blockchain1, Blockchain blockchain2) {
+    if (blockchain1.get_blocks().size() >= blockchain2.get_blocks().size()) {
+        return blockchain1;
+    } else {
+        return blockchain2;
+    }
 }
 
 // Wallet Generation (Simplified / Unsecure) (ECC used in BTC)
@@ -45,6 +49,11 @@ void Blockchain::generate_wallet() {
     wallet_file << "Private key: " << private_key << endl;
     wallet_file << "Public Key: " << public_key << endl;
     wallet_file.close();
+}
+
+// Setters
+void Blockchain::add_block(Block block) {
+    _chain.push_back(block);
 }
 
 // Getters
