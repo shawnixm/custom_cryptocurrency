@@ -7,17 +7,34 @@ using namespace std;
 
 class Block {
 public:
-    Block(vector<Transaction> transactions = vector<Transaction>());
-    Block(vector<Transaction> transactions, Block previous_block);
-    string calculate_hash(vector<Transaction> transactions, int height, string time_stamp);
+    // Constructors
+    Block();
+    Block(vector<Transaction> transactions, Block previous_block, int difficulty);
+
+    // Hashing
+    string calculate_hash(vector<Transaction> transactions);
+
+    // Setters
+    void set_nonce(int nonce);
+    void set_difficulty(int difficulty);
+
+    // Proof of Work
+    string mine_block();
+
+    // Getters
     int get_height();
     string get_hash();
+    int get_nonce();
+    int get_difficulty();
 private:
     int _height;
     string _time_stamp;
     string _hash;
     string _previous_hash;
     vector<Transaction> _transactions;
+    int _nonce;
+    int _difficulty;
+    string _target;
 };
 
 #endif //BLOCK_H

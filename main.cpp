@@ -5,16 +5,12 @@
 
 int main() {
     Blockchain blockchain;
-
-    // Transactions
-    vector<Transaction> transactions;
     Transaction transaction("me","you","10");
+    vector<Transaction> transactions;
     transactions.push_back(transaction);
+    Block block(transactions,blockchain.get_top_block(),blockchain.get_blockchain_difficulty());
+    blockchain.add_block(block);
 
-    // Adding
-    blockchain.add_block(blockchain.create_block(transactions,blockchain.get_blocks()[0]));
-
-    // Results
-    cout << blockchain.get_blocks()[0]<< endl;
+    cout << blockchain.get_top_block().get_nonce() << endl;
     return 0;
 }

@@ -6,12 +6,19 @@ using namespace std;
 
 class Blockchain {
 public:
+    // Constructor
     Blockchain();
+
+    // Setters
     void add_block(Block block);
-    Block create_block(vector<Transaction> transactions, Block previous_block);
+
+    // Getters
     vector<Block> get_blocks();
+    Block get_top_block();
+    int get_blockchain_difficulty();
 private:
     vector<Block> _chain;
+    int _blockchain_difficulty;
 };
 
 #endif //BLOCKCHAIN_H
